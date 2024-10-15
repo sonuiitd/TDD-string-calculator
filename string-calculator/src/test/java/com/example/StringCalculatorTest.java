@@ -11,5 +11,5 @@ public class StringCalculatorTest {
     public void testSingleNumber() {
         assertEquals(1, StringCalculator.add("1"));
     }
-
+ 
 }
