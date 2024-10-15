@@ -7,4 +7,9 @@ public class StringCalculatorTest {
         StringCalculator calculator = new StringCalculator();
         assertEquals(0, calculator.add(""));
     }
+    @Test
+    public void testSingleNumber() {
+        assertEquals(1, StringCalculator.add("1"));
+    }
+
 }
