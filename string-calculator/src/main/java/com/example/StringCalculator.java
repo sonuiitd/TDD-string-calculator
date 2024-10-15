@@ -25,8 +25,12 @@ public class StringCalculator {
         int sum = 0;
         List<String> negativeNumbers = new ArrayList<>();
 
-        // Parse and sum numbers, and collect negative numbers
         for (String num : numArray) {
+            // Validate the number format
+            if (!num.matches("-?\\d+")) {
+                throw new IllegalArgumentException("Invalid input: '" + num + "' is not a number");
+            }
+
             int number = Integer.parseInt(num.trim()); // Ensure to trim the number
             if (number < 0) {
                 negativeNumbers.add(num); // Collect negative numbers

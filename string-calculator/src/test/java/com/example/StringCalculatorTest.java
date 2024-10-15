@@ -35,4 +35,12 @@ public class StringCalculatorTest {
         });
         assertEquals("Negative numbers not allowed: -2", exception.getMessage());
     }
+
+    @Test
+    public void testInvalidCharacters() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            StringCalculator.add("1,a,3");
+        });
+        assertEquals("Invalid input: 'a' is not a number", exception.getMessage());
+    }
 }
