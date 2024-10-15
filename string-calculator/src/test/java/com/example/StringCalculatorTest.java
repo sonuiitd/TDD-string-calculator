@@ -15,5 +15,9 @@ public class StringCalculatorTest {
     public void testMultiNumbers() {
         assertEquals(6, StringCalculator.add("1,5"));
     }
+    @Test
+    public void testNewLinesBetweenNumbers() {
+        assertEquals(6, StringCalculator.add("1\n2,3"));
+    }
 
 }
