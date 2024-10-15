@@ -3,7 +3,13 @@ public class StringCalculator {
     if (numbers.isEmpty()) {
         return 0;
     }
-    return Integer.parseInt(numbers);  // Return the single number
+    String[] numArray = numbers.split(",");
+    int sum = 0;
+    for (String num : numArray) {
+        sum += Integer.parseInt(num);
+    }
+    return sum;
 }
+
 
 }

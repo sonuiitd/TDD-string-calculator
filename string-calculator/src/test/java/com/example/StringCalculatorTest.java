@@ -11,5 +11,9 @@ public class StringCalculatorTest {
     public void testSingleNumber() {
         assertEquals(1, StringCalculator.add("1"));
     }
- 
+    @Test
+    public void testMultiNumbers() {
+        assertEquals(6, StringCalculator.add("1,5"));
+    }
+
 }
